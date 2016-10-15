@@ -112,6 +112,7 @@ public class isPalindrome
 			System.out.println("No");
 	}
 	
+	
 	/**
 	 * This method takes in a string and return true if the
 	 * given string is a palindrome using AP reference and recursion
@@ -128,5 +129,4 @@ public class isPalindrome
 			return isPalindrome3(s.substring(1, s.length() - 1));
 		return "No";
 	}
-
 }
