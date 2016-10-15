@@ -2,6 +2,7 @@ public class isPalindrome
 {
 	public static void main(String[] args)
 	{
+		System.out.println("----- isPalindrome0 ----- ");
 		isPalindrome0("");
 		isPalindrome0("a");
 		isPalindrome0("aa");
@@ -11,9 +12,8 @@ public class isPalindrome
 		isPalindrome0("abca");
 		isPalindrome0("abbc");
 		isPalindrome0("abcdba");
-		System.out.println();
 
-
+		System.out.println("----- isPalindrome1 ----- ");
 		System.out.println(isPalindrome1(""));
 		System.out.println(isPalindrome1("a"));
 		System.out.println(isPalindrome1("aa"));
@@ -23,13 +23,28 @@ public class isPalindrome
 		System.out.println(isPalindrome1("abca"));
 		System.out.println(isPalindrome1("abbc"));
 		System.out.println(isPalindrome1("abcdba"));
-		System.out.println();
-		
-		isPalindrome2("tacougcat");
-		System.out.println();
 
-		System.out.println(isPalindrome3("tacocat"));
+		System.out.println("----- isPalindrome2 ----- ");
+		isPalindrome2("");
+		isPalindrome2("a");
+		isPalindrome2("aa");
+		isPalindrome2("ab");
+		isPalindrome2("aba");
+		isPalindrome2("abba");
+		isPalindrome2("abca");
+		isPalindrome2("abbc");
+		isPalindrome2("abcdba");
 		
+		System.out.println("----- isPalindrome3 ----- ");
+		System.out.println(isPalindrome3(""));
+		System.out.println(isPalindrome3("a"));
+		System.out.println(isPalindrome3("aa"));
+		System.out.println(isPalindrome3("ab"));
+		System.out.println(isPalindrome3("aba"));
+		System.out.println(isPalindrome3("abba"));
+		System.out.println(isPalindrome3("abca"));
+		System.out.println(isPalindrome3("abbc"));
+		System.out.println(isPalindrome3("abcdba"));
 
 
 	}
@@ -107,9 +122,10 @@ public class isPalindrome
 	{
 		if (s.length() < 2)
 			return "Yes";
-		int compare = s.compareTo(s.substring(s.length() - 1, s.length() - 0));
+		String toCompare = s.substring(s.length() - s.length(), s.length() - (s.length() - 1));
+		int compare = toCompare.compareTo(s.substring(s.length() - 1, s.length() - 0));
 		if (compare == 0)
-			return isPalindrome3(s.substring(1, s.length() - 2));
+			return isPalindrome3(s.substring(1, s.length() - 1));
 		return "No";
 	}
 
