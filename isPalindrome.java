@@ -23,6 +23,13 @@ public class isPalindrome
 		System.out.println(isPalindrome1("abca"));
 		System.out.println(isPalindrome1("abbc"));
 		System.out.println(isPalindrome1("abcdba"));
+		System.out.println();
+		
+		isPalindrome2("tacougcat");
+		System.out.println();
+
+		System.out.println(isPalindrome3("tacocat"));
+		
 
 
 	}
@@ -72,13 +79,23 @@ public class isPalindrome
 	 * @param s the String to check whether it is a palindrome 
 	 * @return boolean true of palindrome, false if otherwise
 	 */
-//	public static String isPalindrome2(String s)
-//	{
-//		
-//		if (s.compareTo(s.substring(0, (s.length() - (s.length() - 2))) == 0))
-//			isPalindrome2(s.substring(1, s.length() - 2));
-//		return "yes";
-//	}
+	public static void isPalindrome2(String s)
+	{
+		while (s.length() > 1)
+		{
+			String toCompare = s.substring(s.length() - s.length(), s.length() - (s.length() - 1));
+			int compare = toCompare.compareTo(s.substring(s.length() - 1, s.length() - 0));
+			if (compare == 0)
+				s = s.substring(1, s.length() - 1);
+			else
+				break;
+		
+		}
+		if (s.length() <= 1)
+			System.out.println("Yes");
+		else
+			System.out.println("No");
+	}
 	
 	/**
 	 * This method takes in a string and return true if the
@@ -86,8 +103,14 @@ public class isPalindrome
 	 * @param s the String to check whether it is a palindrome 
 	 * @return boolean true of palindrome, false if otherwise
 	 */
-//	public static void isPalindrome3(String s)
-//	{
-//	
-//	}
-}//
+	public static String isPalindrome3(String s)
+	{
+		if (s.length() < 2)
+			return "Yes";
+		int compare = s.compareTo(s.substring(s.length() - 1, s.length() - 0));
+		if (compare == 0)
+			return isPalindrome3(s.substring(1, s.length() - 2));
+		return "No";
+	}
+
+}
