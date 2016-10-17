@@ -66,9 +66,9 @@ public class isPalindrome
 		
 		}
 		if (s.length() <= 1)
-			System.out.println("Yes");
+			System.out.println(true);
 		else
-			System.out.println("No");
+			System.out.println(false);
 	}
 	
 	/**
@@ -77,14 +77,14 @@ public class isPalindrome
 	 * @param s the String to check whether it is a palindrome 
 	 * @return boolean true of palindrome, false if otherwise
 	 */
-	public static String isPalindrome1(String s)
+	public static boolean isPalindrome1(String s)
 	{
 		//System.out.println(s)
 		if (s.length() < 2)
-			return "Yes";
+			return true;
 		if (s.charAt(0) == s.charAt(s.length() - 1))				
 			return isPalindrome1(s.substring(1, s.length() - 1));	
-		return "No";
+		return false;
 	}	
 
 	
@@ -107,9 +107,9 @@ public class isPalindrome
 		
 		}
 		if (s.length() <= 1)
-			System.out.println("Yes");
+			System.out.println(true);
 		else
-			System.out.println("No");
+			System.out.println(false);
 	}
 	
 	
@@ -119,14 +119,14 @@ public class isPalindrome
 	 * @param s the String to check whether it is a palindrome 
 	 * @return boolean true of palindrome, false if otherwise
 	 */
-	public static String isPalindrome3(String s)
+	public static boolean isPalindrome3(String s)
 	{
 		if (s.length() < 2)
-			return "Yes";
+			return true;
 		String toCompare = s.substring(s.length() - s.length(), s.length() - (s.length() - 1));
 		int compare = toCompare.compareTo(s.substring(s.length() - 1, s.length() - 0));
 		if (compare == 0)
 			return isPalindrome3(s.substring(1, s.length() - 1));
-		return "No";
+		return false;
 	}
 }
