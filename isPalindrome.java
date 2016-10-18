@@ -3,15 +3,15 @@ public class isPalindrome
 	public static void main(String[] args)
 	{
 		System.out.println("----- isPalindrome0 ----- ");
-		isPalindrome0("");
-		isPalindrome0("a");
-		isPalindrome0("aa");
-		isPalindrome0("ab");
-		isPalindrome0("aba");
-		isPalindrome0("abba");
-		isPalindrome0("abca");
-		isPalindrome0("abbc");
-		isPalindrome0("abcdba");
+		System.out.println(isPalindrome0(""));
+		System.out.println(isPalindrome0("a"));
+		System.out.println(isPalindrome0("aa"));
+		System.out.println(isPalindrome0("ab"));
+		System.out.println(isPalindrome0("aba"));
+		System.out.println(isPalindrome0("abba"));
+		System.out.println(isPalindrome0("abca"));
+		System.out.println(isPalindrome0("abbc"));
+		System.out.println(isPalindrome0("abcdba"));
 
 		System.out.println("----- isPalindrome1 ----- ");
 		System.out.println(isPalindrome1(""));
@@ -25,15 +25,15 @@ public class isPalindrome
 		System.out.println(isPalindrome1("abcdba"));
 
 		System.out.println("----- isPalindrome2 ----- ");
-		isPalindrome2("");
-		isPalindrome2("a");
-		isPalindrome2("aa");
-		isPalindrome2("ab");
-		isPalindrome2("aba");
-		isPalindrome2("abba");
-		isPalindrome2("abca");
-		isPalindrome2("abbc");
-		isPalindrome2("abcdba");
+		System.out.println(isPalindrome2(""));
+		System.out.println(isPalindrome2("a"));
+		System.out.println(isPalindrome2("aa"));
+		System.out.println(isPalindrome2("ab"));
+		System.out.println(isPalindrome2("aba"));
+		System.out.println(isPalindrome2("abba"));
+		System.out.println(isPalindrome2("abca"));
+		System.out.println(isPalindrome2("abbc"));
+		System.out.println(isPalindrome2("abcdba"));
 		
 		System.out.println("----- isPalindrome3 ----- ");
 		System.out.println(isPalindrome3(""));
@@ -55,7 +55,7 @@ public class isPalindrome
 	 * @param s the String to check whether it is a palindrome 
 	 * @return boolean true of palindrome, false if otherwise
 	 */
-	public static void isPalindrome0(String s)
+	public static boolean isPalindrome0(String s)
 	{
 		while (s.length() > 1)
 		{
@@ -66,9 +66,9 @@ public class isPalindrome
 		
 		}
 		if (s.length() <= 1)
-			System.out.println(true);
+			return true;
 		else
-			System.out.println(false);
+			return false;
 	}
 	
 	/**
@@ -94,7 +94,7 @@ public class isPalindrome
 	 * @param s the String to check whether it is a palindrome 
 	 * @return boolean true of palindrome, false if otherwise
 	 */
-	public static void isPalindrome2(String s)
+	public static boolean isPalindrome2(String s)
 	{
 		while (s.length() > 1)
 		{
@@ -107,9 +107,9 @@ public class isPalindrome
 		
 		}
 		if (s.length() <= 1)
-			System.out.println(true);
+			return true;
 		else
-			System.out.println(false);
+			return false;
 	}
 	
 	
